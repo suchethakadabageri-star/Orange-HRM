@@ -1,83 +1,53 @@
-let age = 20
+//String Methods
+//Backtick is used to wright string in multiple lines and also used to wright string with values of variables and expressions (String Parameterization)
 
-console.log(`Your age is ${age}`)  // backtick
+//length
+let str = "Welcome to Strings"
+const result = str.length
+console.log(result)
 
-let str = 'Welcome to JavaScript'
+//charAt(index): returns the character at the specified index
 
-//1. length - Returns the number of characters in a string
-// Syntax -- stringName.length
-console.log(str.length)
+const result1 = str.charAt(5)
+console.log(result1)
 
 
-//2. charAt() - Returns the character at a specified index in a string
-//Syntax -- stringName.charAt(index)
+let str1 = "Welcome to Javascript"
+let str2 = "Welcome to Strings"
 
-console.log(str.charAt(4))
-
-//"abcdabcd" -- a2b2c2d2
-
-//3. concat() - Joins two or more strings and returns a new string
-//Syntax -- string1.concat(string2, string3, ...)
-
-console.log(str.concat("Hello", "JavaScript"))
-
-//4. indexOf() - Returns the index of the first occurrence of a specified value in a string
-//Syntax -- stringName.indexOf(searchValue, fromIndex)
+const result2 = str.concat(str1,str2)
+console.log(result2)
 
 //What is difference between slice() and substring()
 
-//5. slice()
-//slice(startIndex?,endIndex?)
-//stringName.slice()
+//slice(startIndex?,endIndex?): returns the part of string.
 console.log(str.slice())
-console.log(str.slice(2,9))
+console.log(str.slice(2,7))
+console.log(str.slice(7,3))
 
-//6. substring()
-//substring(startIndex, endIndex?)
-console.log(str.substring(2))
-console.log(str.substring(2,9))
+//subsctring(stratIndex,endIndex?): returns the part of string
 
-console.log(str.slice(9,2)) // returns empty string because startIndex is greater than endIndex
-console.log(str.substring(9,2)) // substring() method swaps the indexes if startIndex is greater than endIndex
+console.log(str.substring(3))
+console.log(str.substring(9,2))
 
-//7. startsWith() - Determines whether a string begins with the characters of a specified string, returning true or false as appropriate.
-console.log(str.startsWith("w"))
+//startsWith(string): It checkes the string is starting eith specified string or character
+
 console.log(str.startsWith("W"))
 
-//8. endsWith() - Determines whether a string ends with the characters of a specified string, returning true or false as appropriate.
-console.log(str.endsWith("t"))
-console.log(str.endsWith("T"))
+//endsWith(string)
+console.log(str.toUpperCase().endsWith("S"))
 
-//9. toUpperCase() - Converts a string to uppercase letters
-console.log(str.toUpperCase())
+//trim(): remove unnecessary trailing and leading spaces
+//trimStart(): remove leading and trailing space from starting
+//trimEnd(): remove leading and trailing space from the end
 
-//10. toLowerCase() - Converts a string to lowercase letters
-console.log(str.toLowerCase())
+//split(seperator): Splits the string into array of substring based on specified seperator
 
+let string = "Apple Banana Orange"
+console.log(string.split(" "))
 
-let str2 = "   This is an element   "
+let email = "suchetha@qamitra.com"
+const domain = email.split("@")
 
-//11. trim() - Removes whitespace from both ends of a string
-console.log(str2.length)
-console.log(str2.trim().length)
-
-
-//12. trimStart() - Removes whitespace from the beginning of a string
-console.log(str2.trimStart().length)
-
-//13. trimEnd() - Removes whitespace from the end of a string
-console.log(str2.trimEnd().length)
-
-//16. spit() - Splits a string into an array of substrings, and returns the new array
-//Syntax -- stringName.split(separator, limit)
-
-let str3 = "Apple Banana Mango Orange"
-let fruits = str3.split(" ") // splits the string into an array of substrings using space as a separator
-console.log(fruits) // Output: ["Apple", "Banana", "Mango", "Orange"]
-
-let email = "suchetha.kadabageri@talentica.com"
-let emailParts = email.split("@") // splits the email into two parts using "@" as a separator
-console.log(emailParts) // Output: ["suchetha.kadabageri", "talentica.com"]
-console.log(emailParts[1]) // Output: "talentica.com"
-
-console.log(emailParts[1].split(".")[0]) // Output: ["talentica", "com"]
+console.log(domain)
+console.log(domain[1].split(".")[0])

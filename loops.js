@@ -1,70 +1,45 @@
-//print 1 to 10 using for loop
-
-for(let i=1; i<=10;i++)
+//loops : Will execute the block {...} of code multiple times until the condition becomes false.
+/*
+syntax:
+for(intialization; condition; increment/decrement)
 {
-    
- console.log(i);
-
-   
+code to be executed
 }
+*/
 
+/*
+for loop
+--------------
+1. for loop   -- Traditional for loop - when we know that number of times to run the iteration.
+2. for of loop-- looping through itrable objects - array, string,...
+3. for in loop-- looping through properties of an object- {key:value}
+ex: Dropdown - countries - for loop - 250 iterations
 
-for(let i=1; i<=20; i++)
+while loop  -- When we do not know how many times to run the iteration.
+ex: calendar date : while loop
+ex: search a product in e-commerce site - pagination - lazy loading
+
+do while loop -- when we want to execute the code atleast once before checking the condition.
+ex: Login page
+*/
+
+for(let i=0;i<10;i++)
 {
-    if(i%2===0)
+    if(i===5)
     {
-    console.log(i);
+        continue;
     }
-}
-
-//for...of loop
-
-let arr = [1,2,4,5,7]
-
-for(let num of arr)
-{
-    console.log(num);
-}
-
-console.log("-----")
-
-for(let i=0;i<arr.length;i++)
-{
-    console.log(arr[i]);
-}
-
-
-
-//while loop
-
-let i=1;
-
-while(i<=10)
-{
-    console.log(i);
-    i++;
-}
-
-console.log("-----")
-
-let j=10
-while(j>=0)
-{
-    console.log(j);
-    j--; // can also be --j or j-=1 or j=j-1
-}
-console.log("-----")
-
-//for...in loop on objects
-
-const user = {
-    name: "John",
-    age: 30,
-    city: "New York"
-}
-
-for(let key in user)
-{
-        console.log(key, user[key]);
+    console.log("The value of i is:" + i);
     
 }
+
+/* while loop syntax:
+
+intialization;
+while(condition){
+code to be executed
+increment/decrement
+}
+
+break: To exit the loop when the condition is true.
+constinue: To skip the current iteration and continue with the next iteration.*/
